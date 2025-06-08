@@ -1,0 +1,324 @@
+/* Custom Properties for Cool Colors */
+:root {
+    --primary-blue: #007BFF; /* Deep Sky Blue */
+    --light-blue: #EBF7FF;   /* Very light blue for soft backgrounds */
+    --accent-green: #28A745; /* Emerald Green for accents/success */
+    --text-dark: #2c3e50;    /* Dark navy for primary text */
+    --text-light: #607d8b;   /* Muted blue-gray for secondary text */
+    --white: #FFFFFF;
+    --soft-gray: #F8F9FA;    /* Off-white for section backgrounds */
+    --border-color: #dee2e6; /* Light border color */
+}
+
+/* Base Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Changed to Roboto for English */
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    color: var(--text-dark);
+    direction: ltr; /* Left-to-right for English */
+    text-align: left; /* Align text to the left for English */
+    background-color: var(--soft-gray);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header/Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #6dd5ed 100%); /* Blue to light blue gradient */
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat for headlines */
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.primary-btn {
+    background-color: var(--accent-green);
+    color: var(--white);
+    border: 2px solid var(--accent-green);
+}
+
+.primary-btn:hover {
+    background-color: #218838;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.4);
+}
+
+.secondary-btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: 2px solid var(--primary-blue);
+}
+
+.secondary-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: -50px; /* Overlap with hero section */
+    position: relative;
+    z-index: 10;
+}
+
+.how-it-works-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.step-item {
+    background-color: var(--light-blue);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.step-item h3 {
+    font-size: 1.8em;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.step-item p {
+    color: var(--text-light);
+    font-size: 1.1em;
+}
+
+/* Trust & Benefits Section */
+.trust-benefits-section {
+    background-color: var(--soft-gray);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.trust-benefits-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    text-align: left; /* Aligned to left for English */
+}
+
+.benefit-list li {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start; /* Align checkmark to top of text */
+    gap: 15px;
+    background-color: var(--white);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.benefit-list li:hover {
+    transform: translateX(10px); /* Move right on hover for LTR */
+}
+
+.check-icon {
+    font-size: 1.5em;
+    color: var(--accent-green);
+    min-width: 30px; /* Ensure checkmark doesn't push text */
+}
+
+.cta-message {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 8px solid var(--primary-blue);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: var(--accent-green);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        font-size: 1.2em;
+        padding: 15px 30px;
+    }
+
+    .how-it-works-section h2, .trust-benefits-section h2 {
+        font-size: 2.2em;
+    }
+
+    .step-item h3 {
+        font-size: 1.5em;
+    }
+
+    .benefit-list li {
+        font-size: 1.1em;
+        padding: 12px 20px;
+    }
+
+    .cta-message {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    .how-it-works-section h2, .trust-benefits-section h2 {
+        font-size: 1.8em;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr; /* Stack steps vertically */
+    }
+
+    .step-item {
+        padding: 20px;
+    }
+
+    .benefit-list li {
+        font-size: 1em;
+        gap: 10px;
+    }
+
+    .check-icon {
+        font-size: 1.2em;
+        min-width: 25px;
+    }
+
+    .cta-message {
+        font-size: 1.1em;
+    }
+}
+```
+
+---
+
